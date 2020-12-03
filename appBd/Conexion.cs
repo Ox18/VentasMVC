@@ -16,11 +16,11 @@ namespace appBd
             SqlConnectionStringBuilder generadorCadena = new SqlConnectionStringBuilder();
 
             // Asignar valores a las propiedades del generador
-            generadorCadena.DataSource = "127.0.0.1"; // servidor
-            generadorCadena.InitialCatalog = "BDMARKET402"; // base de datos
-            //generadorCadena.IntegratedSecurity = true; //seguridad windows
-            generadorCadena.UserID = "sa"; // usuario
-            generadorCadena.Password = "123456"; // contrase;a
+            generadorCadena.DataSource = "localhost"; // servidor
+            generadorCadena.InitialCatalog = "BDMARKET"; // base de datos
+            generadorCadena.IntegratedSecurity = true; //seguridad windows
+            //generadorCadena.UserID = "sa"; // usuario
+            //generadorCadena.Password = "123456"; // contrase;a
 
             //recuperar cadena
             string cadena = generadorCadena.ConnectionString;

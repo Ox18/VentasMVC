@@ -15,6 +15,7 @@ namespace appBd
         public Form1()
         {
             InitializeComponent();
+           // testear();
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -105,6 +106,28 @@ namespace appBd
             MessageBox.Show("abierto");
             cnx.Close();
             MessageBox.Show("Cerrado");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvProductos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvProductos.SelectedRows.Count > 0)
+            {
+                // recoger la fija seleccionada
+                DataGridViewRow filaSelecionada = dgvProductos.SelectedRows[0];
+
+                //recoger los valores
+                int id = Convert.ToInt32(filaSelecionada.Cells["id"].Value);
+                string descripcion = Convert.ToString(filaSelecionada.Cells["descripcion"].Value);
+                string categoria = Convert.ToString(filaSelecionada.Cells["categoria"].Value);
+                double precio = Convert.ToDouble(filaSelecionada.Cells["precio"].Value);
+
+
+            }
         }
     }
 }
